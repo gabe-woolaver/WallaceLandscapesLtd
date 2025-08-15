@@ -1,0 +1,67 @@
+/* Height variable so anchors don't hide under the fixed header */
+:root { --header-h: 140px; }
+
+/* Make the header fixed and transparent at the very top */
+.site-header{
+  position: fixed;           /* was: sticky */
+  top: 0; left: 0; right: 0;
+  z-index: 60;
+  background: transparent;   /* default: transparent overlay */
+  transition: background .3s ease, box-shadow .3s ease;
+}
+
+/* Header content sizing */
+.site-header nav{
+  display:flex; align-items:center; gap:1rem;
+  min-height: var(--header-h);
+}
+
+/* Logo stays 120x120 at desktop (you already set these) */
+.logo{ inline-size:120px; block-size:120px; object-fit:contain; }
+.logo.small{ inline-size:64px; block-size:64px; }
+
+/* At top, put white text over the image */
+.site-header.at-top .brand-name{ color:#fff; text-shadow:0 2px 10px rgba(0,0,0,.25); font-size:1.4rem; }
+.site-header.at-top .nav-links a{ color:#fff; text-shadow:0 2px 10px rgba(0,0,0,.25); font-size:1.05rem; }
+.site-header.at-top .icon-button,
+.site-header.at-top .social-link{ background:rgba(255,255,255,.9); }
+
+/* Once you scroll, header becomes solid white with subtle shadow */
+.site-header.scrolled{
+  background:#fff;
+  box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+.site-header.scrolled .brand-name{ color:#222; text-shadow:none; font-size:1.125rem; }
+.site-header.scrolled .nav-links a{ color:#222; text-shadow:none; }
+
+/* Ensure the hero really fills the screen and bleeds edge-to-edge */
+.hero{
+  position: relative;
+  inline-size: 100vw;
+  margin-inline: calc(50% - 50vw);
+  min-block-size: 100svh;
+  block-size: 100vh;
+  overflow: hidden;
+  isolation: isolate;
+}
+@supports (block-size: 100dvh){ .hero{ block-size: 100dvh; } }
+.hero-static{
+  position:absolute; inset:0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Give in-page anchors room under the fixed header */
+section[id]{ scroll-margin-top: calc(var(--header-h) + 16px); }
+
+/* Responsive header height + logo size */
+@media (max-width: 900px){
+  :root{ --header-h: 110px; }
+  .logo{ inline-size:90px; block-size:90px; }
+}
+@media (max-width: 640px){
+  :root{ --header-h: 96px; }
+  .site-header nav{ flex-wrap: wrap; }
+  .logo{ inline-size:72px; block-size:72px; }
+}
