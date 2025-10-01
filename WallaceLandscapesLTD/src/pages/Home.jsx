@@ -46,14 +46,14 @@ export default function Home() {
             <h2 className="section-title">Built for Beautiful, Lasting Spaces</h2>
             <p className="lead" style={{ marginBottom: "1rem" }}>
               From lush lawns, welcoming walkways, and engineered retaining walls to storm-water
-              solutions, tranquil water features, and thorough seasonal clean-ups—our team has the
+              solutions, tranquil water features, and thorough seasonal clean-ups. Our team has the
               skills and equipment to handle even the most challenging sites. Whether it’s routine
               maintenance, seasonal service, or a large-scale landscape transformation, we focus on
               results that exceed expectations.
             </p>
             <p className="lead">
               We believe your outdoor space should feel like a natural extension of your home or
-              business—a place that reflects your style, fits your needs, and grows in value over
+              business, a place that reflects your style, fits your needs, and grows in value over
               time. That’s why we partner with you from concept to completion, tailoring every
               detail so each project is as unique as the people we serve.
             </p>

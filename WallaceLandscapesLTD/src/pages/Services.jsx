@@ -15,7 +15,7 @@ export default function Services() {
         <p className="wl-services-sub">
           Wallace Landscapes offers a comprehensive range of professional landscaping services to
           enhance, maintain, and transform your outdoor spaces. From durable structures and lush
-          plantings to smart water management and reliable upkeep—we tailor every project to your needs.
+          plantings to smart water management and reliable upkeep, we tailor every project to your needs.
         </p>
       </header>
 
@@ -28,7 +28,7 @@ export default function Services() {
           <div className="wl-svc-copy">
             <h3 className="wl-svc-title">Hardscaping and Construction</h3>
             <p className="wl-svc-lead">
-              Built to last—precise installation and clean finishes that look great and perform for years.
+              Built to last, precise installation and clean finishes that look great and perform for years.
             </p>
             <ul className="wl-svc-list">
               <li><strong>Walkway’s & Patio’s</strong> — Attractive, durable surfaces for everyday use and outdoor living.</li>
@@ -84,7 +84,7 @@ export default function Services() {
           <div className="wl-svc-copy">
             <h3 className="wl-svc-title">Landscape Maintenance and Cleanup</h3>
             <p className="wl-svc-lead">
-              Our maintenance and cleanup services are top-notch—tidy crews, clear communication,
+              Our maintenance and cleanup services are top-notch, including tidy crews, clear communication,
               and dependable scheduling to keep your property looking its best in every season.
             </p>
           </div>
